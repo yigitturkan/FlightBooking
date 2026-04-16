@@ -1,16 +1,7 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-
-namespace FlightBooking.Entities
+﻿namespace FlightBooking.Dtos.FlightDtos
 {
-    public class Flight
+    public class CreateFlightDto
     {
-        [BsonId] // Ne işe Yarar? - Bu property MongoDB'deki ıd alanına denk gelir. Yani senin 
-        // c# daki FlightId Mongodb de _id ye denk geliyor.
-
-        [BsonRepresentation(BsonType.ObjectId)]
-        
-        public string FlightId { get; set; }
         public string FlightNumber { get; set; }
         public string AirlineCode { get; set; }
         public string DepartureAirportCode { get; set; }
@@ -25,5 +16,6 @@ namespace FlightBooking.Entities
         public decimal BasePrice { get; set; }
         public string Currency { get; set; }
         public string Status { get; set; }
+
     }
 }
