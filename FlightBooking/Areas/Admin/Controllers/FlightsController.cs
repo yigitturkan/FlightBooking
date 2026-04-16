@@ -12,6 +12,13 @@ namespace FlightBooking.Areas.Admin.Controllers
         {
             return View();
         }
+
+
+        [HttpGet] // Bu şu demek: Bu action sadece GET isteği ile çalışır.
+        public IActionResult CreateFlight ()
+        {
+            return View();
+        }
     }
 
     // Nasıl Çalışır?
